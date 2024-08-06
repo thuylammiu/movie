@@ -1,0 +1,27 @@
+<article class="product-item">
+  <header>
+    <i class="fa-solid fa-plus"></i>
+    <div class="info">
+      <h5>{{movie.title}}</h5>
+      <p>{{movie.type}}</p>
+    </div>
+  </header>
+  <div class="content">
+    <div class="content-center">
+      <span>Year : {{movie.year}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="checkbox" (change)="onStatusChange()" [checked]="status" [(ngModel)]="status">
+      &nbsp;<span>{{movie.status}}</span>
+
+    </div>
+    <footer>
+      <div class="actions">
+        <button type="button" class="btn edit-btn" (click)="onEditClick($event)">
+          Edit
+        </button>
+        <button type="button" class="btn delete-btn" (click)="onDelete()">
+          delete
+        </button>
+      </div>
+    </footer>
+  </div>
+</article>

@@ -1,0 +1,30 @@
+<div class="error-label">
+  <div class="alert alert-danger" role="alert" [hidden]="!loginError">
+    {{loginError}}
+  </div>
+</div>
+<form class="register-form">
+  <div class='form-row'>
+    <label htmlFor="username" class='form-label'>
+      User Name
+    </label>
+    <input id="username" type="email" name="username" placeholder="Username" class='form-input' autofocus="autofocus"
+      [(ngModel)]="loginViewModel.UserName" />
+
+  </div>
+  <div class='form-row'>
+    <label htmlFor="password" class='form-label'>
+      Password
+    </label>
+    <input id="password" type="password" name="password" placeholder="Password" class='form-input' autofocus="autofocus"
+      [(ngModel)]="loginViewModel.Password" />
+
+  </div>
+  <button type='submit' class='btn btn-block' (click)="onLoginClick($event)">
+    Submit
+  </button>
+  <div style="text-align: right; margin-top: 5px;">
+    <a routerLink="/signup">Register</a>
+  </div>
+
+</form>

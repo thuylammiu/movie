@@ -1,0 +1,29 @@
+npm install init
+npm install express
+npm install nodemon
+ "start": "nodemon server.js"
+npm i dotenv
+npm i mongoose
+
+
+npm install -g @angular/cli
+ng new my-angular-app
+ng generate component my-component
+
+ng g service services/backendApi
+npm install bcrypt
+
+npm install dotenv
+
+bcrypt.hashSync(req.body.password, 
+
+ng generate environments
+npm install bcrypt
+
+ .\mongorestore -d exam2 -c person lau
+reates.bson
+
+http : import HttpClientModule
+ngModel : FormsModule, ReactiveFormsModule
+
+db.theaters.createIndex({"location.geo.coordinates": "2dsphere"})

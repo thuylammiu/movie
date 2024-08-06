@@ -1,0 +1,73 @@
+<div class="error-label">
+  <div class="alert alert-danger" role="alert" [hidden]="!signupError">
+    {{signupError}}
+  </div>
+</div>
+<form class="register-form" #myForm="ngForm">
+    
+    <div class='form-row'>
+        <label htmlFor="username" class='form-label'>
+          User name
+        </label>
+        <input
+          id="username"
+          type="username"
+          name="username"
+          required
+          placeholder="Username"
+          class='form-input'
+          autofocus="autofocus"
+          [(ngModel)]="signupViewModel.UserName" />   
+             
+        
+      </div>
+    <div class='form-row'>
+        <label htmlFor="username" class='form-label'>
+          Email
+        </label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          required
+          placeholder="Email"
+          class='form-input'
+          autofocus="autofocus"
+          [(ngModel)]="signupViewModel.Email" />       
+        
+      </div>
+      <div class='form-row'>
+        <label htmlFor="password" class='form-label'>
+          Password
+        </label>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          required
+          placeholder="Password"
+          class='form-input'
+          autofocus="autofocus"
+          [(ngModel)]="signupViewModel.Password"/>        
+        
+      </div>
+      <div class='form-row'>
+        <label htmlFor="password" class='form-label'>
+          Confirm Password
+        </label>
+        <input
+          id="confirmpassword"
+          type="password"
+          name="confirnpassword"
+          required
+          placeholder="Confirm Password"
+          class='form-input'
+          autofocus="autofocus"
+          [(ngModel)]="signupViewModel.ConfirmPassword"/>        
+        
+      </div>
+      <button type='submit' class='btn btn-block' (click) = "onSubmitClick($event)"> 
+        Submit
+        </button>
+   
+  </form>

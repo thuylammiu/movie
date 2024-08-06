@@ -1,0 +1,78 @@
+<div class='product-page'>
+  <div class='add-form'>
+    <div class="alert alert-danger" role="alert" [hidden]="!errMsg">
+      {{errMsg}}
+    </div>
+    <form [formGroup]="movieForm" (ngSubmit)="onSubmit()" class='form'>
+      <div class='form-center'>
+
+
+        <div class='form-row'>
+
+          <label for="title" class='form-label'>Title (*)</label>
+          <input type="text" required id="title" formControlName="title" class='form-input' #title>
+        </div>
+
+        <div class="form-row">
+
+          <label for="imagePath" class='form-label'>Year (*)</label>
+          <input type="number" id="year" required formControlName="year" class='form-input' #year>
+
+        </div>
+        <div class="form-row">
+
+          <label for="imagePath" class='form-label'>Image Link (*)</label>
+          <input type="text" id="year" required formControlName="imagePath" class='form-input' #imagePath>
+
+        </div>
+        <div class="form-row">
+
+          <label for="imagePath" class='form-label'>Trailer Link (*)</label>
+          <input type="text" id="year" required formControlName="trailerPath" class='form-input' #trailerPath>
+
+        </div>
+
+        <div class="form-row">
+
+          <label for="description" class='form-label'>Status</label>
+          <select class="form-control" id="status" formControlName="status">
+            <option value="Public">Public</option>
+            <option value="Private">Private</option>
+
+          </select>
+
+        </div>
+
+        <div class="form-row">
+
+          <label for="description" class='form-label'>Type</label>
+          <select class="form-control" id="type" formControlName="type">
+            <option value="Action">Action</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Horror">Horror</option>
+            <option value="Animation">Animation</option>
+            <option value="Documentary">Documentary</option>
+          </select>
+
+        </div>
+        <div class="form-row">
+
+          <label for="description" class='form-label'>Director</label>
+          <select name="options" multiple="true" class="form-control" formControlName="director" #director>
+            <option *ngFor="let item of directors" [value]="item.id">{{ item.name }}</option>
+          </select>
+
+        </div>
+        <div class='btn-container'>
+
+          <button type='submit' class='btn btn-block submit-btn'>
+            submit
+          </button>
+          <button type='button' class='btn btn-block clear-btn' (click)="onCancel()">
+            cancel
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

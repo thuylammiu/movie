@@ -1,0 +1,25 @@
+<div class="product-page">
+
+    <div class="movie-container">
+        <div class="movie-item" *ngFor="let item of movies">
+            <div>
+                <a [routerLink]="['/user-movies-detail', item.id]"> <img
+                        src="../../../../assets/images/{{item.imagePath}}"></a>
+
+            </div>
+            <div class="movie-item-desc">
+
+                <h3 class="movie-item-desc-title">
+                    {{item.title | lowercase}}
+                </h3>
+                <div class="detail-start-container">
+                    <div class="stars"><span class="star">★</span><span class="star">★</span><span
+                            class="star">★</span><span class="star">★</span><span
+                            class="star star-empty">★</span><!----></div><!---->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
